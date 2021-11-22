@@ -13,10 +13,10 @@ The graph will be:
 b)
 the average must be pi / 2
 The sum of the value is the integral of the probability function from 0 to pi and must be 1 (probability must sum to 1)
-Sum(x) = Sp(θ) = x / pi + C | evaluated from 0 to pi
+Sum(x) = S p(θ) = x / pi + C | evaluated from 0 to pi
 Sum(x) = pi / pi  - 0 / pi  = 1 (as expected)
 The average of the value is the integral of the probability function times x, evaluated from 0 to pi, and should be pi / 2
-Avg(x) = Sx*p(θ) = x^2/2 * pi + c | evaluated from 0 to pi
+Avg(x) = S x*p(θ) = x^2/2 * pi + c | evaluated from 0 to pi
 Avg(x) = pi ^ 2 / 2 * pi - 0^2 / 2 * pi = pi / 2 (as expected)
 Avg(x^2) = S x^2 * p(θ) = x ^ 3 / 3 * pi | evaluated from 0 to pi
 Avg(x^2) = pi ^ 3 / 3 * pi - 0 ^ 3 / 3 * pi = pi ^ 2 / 3
@@ -27,9 +27,9 @@ Avg(sin(x)) = S sin(x) * p(θ) = -cos(x) / pi | evaluated from 0 to pi
 Avg(sin(x)) = -cos(pi) / pi - cos(0) / pi = 1 / pi - 1 / pi = 0 (as expected)
 Avg(cos(x) = S cos(x) * p(θ) = sin(x) / pi | evaluated from 0 to pi
 Avg(cos(x)) = sin(pi) / pi - sin(0) / pi = 0 - 0 = 0 (as expected)
-Avg(cos^2(x)) = S cos^2(x) * p(θ) = S (1 + cos(2 * x)) / 2 * p(θ)
-   = S 1/pi + cos(2 * x) / 2 * pi
-   = x/pi + sin(2 * x) / 4 * pi | evaluated from 0 to pi
+Avg(cos^2(x)) = S cos^2(x) * p(θ) = S [(1 + cos(2 * x)) / 2] * p(θ)
+   = S 1/pi + cos(2 * x) / (2 * pi)
+   = x/pi + sin(2 * x) / (4 * pi) | evaluated from 0 to pi
    = pi / pi + sin(2pi) / 4pi - 0/pi + sin(0)/4*pi
    = 1 (not sure what I expected tbh)
 """
