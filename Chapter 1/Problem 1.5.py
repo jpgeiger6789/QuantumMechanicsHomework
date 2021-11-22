@@ -2,12 +2,17 @@ import math
 import statistics
 
 """
-When you plot asin(x)/pi, you get negative values in the LHS which...is bad...you can't have negative probabilities...
 
+"""
+
+
+
+"""
+Problem 1.4 (for reference)
 a)
 It really feels like p(x) should be a constant 1/xmax since there is a 1-to-1 mapping between the angle and the
 position and p(θ) is a constant = 1/pi
-However we do need to prove this somehow  
+However we do need to prove this somehow  (turns out to be false?)
 p(θ) = 1 / pi
 x(θ) = cos(θ)
 θ = acos(x)
@@ -27,9 +32,9 @@ P(x) =  -dx / [pi*sqrt(1-x^2)]
 Total probability = integral of P(x) from x = -1 to 1
 S -dx / [pi * sqrt(1-x^2)] = asin(x)/pi <<wolfram-alpha
 
-asin(1)/pi - asin(-1)/pi  this does sum to 1! 
-P(x) = asin(x)/pi  <<values go from negative to positive???
-p(x) = 1/[pi*sqrt(1-x^2)]  <<values are always positive...
+asin(1)/pi - asin(-1)/pi  this does sum to 1!
+P(x) = asin(x)/pi
+p(x) = 1/[pi*sqrt(1-x^2)]
 
 <x> = S x*p(x) | -1 to 1
     S x / [pi * sqrt(1-x^2)] * dx
@@ -47,9 +52,8 @@ variance = <x^2> - <x> ^ 2 = pi
 std dev = sqrt(variance) = sqrt(pi)
 """
 
-
 def f(x):
-    return math.asin(x) - x * math.sqrt(1 - x ** 2) / (2 * math.pi)
+    return((math.asin(x) - x * math.sqrt(1 - x ** 2) / (2 * math.pi)))
 
 
 n = [p(i/100) for i in range(-99, 99, 1)]
