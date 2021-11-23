@@ -10,36 +10,36 @@ The graph will be:
 0 from -pi / 2 to 0
 1 / pi from 0 to pi
 0 from pi to 3 * pi / 2
+
+The total probability is the integral of the probability function from 0 to pi and must be 1 (probability must sum to 1)
+P(0 to pi) = S p(θ) = x / pi + C | evaluated from 0 to pi
+P(0 to pi) = pi / pi  - 0 / pi  = 1 (as expected)
+
 b)
-the average must be pi / 2
-The sum of the value is the integral of the probability function from 0 to pi and must be 1 (probability must sum to 1)
-Sum(x) = S p(θ) = x / pi + C | evaluated from 0 to pi
-Sum(x) = pi / pi  - 0 / pi  = 1 (as expected)
-The average of the value is the integral of the probability function times x, evaluated from 0 to pi, and should be pi / 2
-Avg(x) = S x*p(θ) = x^2/2 * pi + c | evaluated from 0 to pi
-Avg(x) = pi ^ 2 / 2 * pi - 0^2 / 2 * pi = pi / 2 (as expected)
-Avg(x^2) = S x^2 * p(θ) = x ^ 3 / 3 * pi | evaluated from 0 to pi
-Avg(x^2) = pi ^ 3 / 3 * pi - 0 ^ 3 / 3 * pi = pi ^ 2 / 3
-variance = Avg(x^2) - Avg(x)^2 = pi ^ 2 / 3 - pi ^2 / 4 = pi^2 / 12
+<θ> - the average must be pi / 2
+The average angle is the integral of the probability function times θ, evaluated from 0 to pi, and should be pi / 2
+<θ> = S θ*p(θ) = θ^2 / (2 * pi) + c | evaluated from 0 to pi
+<θ> = pi ^ 2 / (2 * pi) - 0^2 / (2 * pi) = pi / 2 (as expected)
+
+<θ^2> = S θ^2 * p(θ) = θ^3 / (3*pi) | evaluated from 0 to pi
+<θ^2> = pi^3 / 3*pi - 0^3 / 3*pi = pi^2 / 3
+
+variance = Avg(θ^2) - Avg(θ)^2 = pi^2 / 3 - pi^2 / 4 = pi^2 / 12
 sigma = sqrt(variance) = sqrt(pi ^ 2 /  12) = pi / sqrt(12)
+
 c)
-Avg(sin(x)) = S sin(x) * p(θ) = -cos(x) / pi | evaluated from 0 to pi
-Avg(sin(x)) = -cos(pi) / pi - cos(0) / pi = 1 / pi - 1 / pi = 0 (as expected)
-Avg(cos(x) = S cos(x) * p(θ) = sin(x) / pi | evaluated from 0 to pi
-Avg(cos(x)) = sin(pi) / pi - sin(0) / pi = 0 - 0 = 0 (as expected)
-Avg(cos^2(x)) = S cos^2(x) * p(θ) = S [(1 + cos(2 * x)) / 2] * p(θ)
-   = S 1/pi + cos(2 * x) / (2 * pi)
-   = x/pi + sin(2 * x) / (4 * pi) | evaluated from 0 to pi
+<sin(θ)> = S sin(θ) * p(θ) = -cos(x) / pi | evaluated from 0 to pi
+<sin(θ)> = -cos(pi) / pi - cos(0) / pi = 1 / pi - 1 / pi = 0 (as expected)
+
+<cos(θ)> = S cos(θ) * p(θ) = sin(θ) / pi | evaluated from 0 to pi
+<cos(θ)> = sin(pi) / pi - sin(0) / pi = 0 - 0 = 0 (as expected)
+
+<cos^2(θ)> = S cos^2(θ) * p(θ) = S [(1 + cos(2*θ)) / 2] * p(θ)
+   = S 1/pi + cos(2*θ) / (2*pi)
+   = θ/pi + sin(2*θ) / (4*pi) | evaluated from 0 to pi
    = pi / pi + sin(2pi) / 4pi - 0/pi + sin(0)/4*pi
    = 1 (not sure what I expected tbh)
 """
-
-
-
-
-
-
-
 
 mpmath.mp.dps = 25
 
