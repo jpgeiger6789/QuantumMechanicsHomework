@@ -106,10 +106,11 @@ a is the offset from the origin along the x axis to the center of the bell curve
                                                                                                             
     R = u^2                                                                                                 <<This will differentiate into a term I know how to integrate (it will go to 0)
     dT = A * e^(-u^2) * du                                                                                  <<this looks like our old friend D(x)
+    dT = A * e^(-λ[x-a]^2) * dx                                                                             <<u = v * sqrt(λ); v = x - a; just reverting the exponent to its original form
     dT = sqrt(λ/pi) * e^(-λ[x-a]^2) * dx                                                                    <<A = sqrt(λ/pi)
     dT = sqrt(λ/pi) * e^(-[x-a]^2/(2σ^2)) * dx                                                              <<λ = 1/(2σ^2)
         This is our original form of the cumulative distribution function.
-        when integrated from x'=-∞ to x'=x, this is equal to D(x).
+        When integrated from x'=-∞ to x'=x, this is equal to D(x).
     
     dR = 2u * du
     T = ∫ dT 
