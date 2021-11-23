@@ -131,5 +131,5 @@ a is the offset from the origin along the x axis to the center of the bell curve
         D(x) = T(x) - T(-∞)
              
         
-<x^2> =  (A / λ^1.5) * ∫ u^2 * e^(-u^2) * du | u=-∞ to u =∞ + a^2
+c) Did this online, see intro to part b)
 """
