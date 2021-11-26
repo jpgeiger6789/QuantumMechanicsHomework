@@ -85,6 +85,14 @@ a is the offset from the origin along the x axis to the center of the bell curve
     Note - we did know this would be the answer when we originally messed around with the variables.  However, it's
     good to learn how to work with gaussian integrals, and I hope to god to never have to do this again
 
+    We haven't given this a full-depth exploration, but suffice it to say that Mark just plugs this into a
+    calculus-calculator and lets the computer do the integration.  When you do this, you will get the following
+    output (Mark did pull the λ out of the exponential but I'm just going to give the answer):
+<x^2> =  ∫ x^2 * p(x) = ∫ A * x^2 * e^(-λ[x-a]^2) * dx | x=-∞ to x =∞     
+<x^2> = [sqrt(pi)/2] * sqrt(λ/pi) * 1/λ^1.5 = 1/(2λ)
+
+
+
     Oh, wait.  Nope, gotta do it again.  But harder this time.
 <x^2> =  ∫ x^2 * p(x) = ∫ A * x^2 * e^(-λ[x-a]^2) * dx | x=-∞ to x =∞                                       <<This will be harder - the trick we used earlier will not work.
 <x^2> =  A * ∫ x^2 * e^(-λ[x-a]^2) * dx | x=-∞ to x =∞                                                      <<Pull out the A term, let's get to work
